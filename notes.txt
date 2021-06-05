@@ -1,0 +1,3 @@
+Still working on the login page but im sleepy. kind of getting the hang of it i think
+need to solve a small issue with the view being pushed up when the user needs to type in their email or password 
+

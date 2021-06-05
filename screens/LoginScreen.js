@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import { StyleSheet, View} from 'react-native'
-import { TextInput, Button} from 'react-native-paper'
+import { Button, Avatar} from 'react-native-paper'
+import TextInput from '../components/TextInput'
 
 export default function LoginScreen() {
     const [email,setEmail] = useState('');
@@ -8,24 +9,10 @@ export default function LoginScreen() {
 
     return (
         <View style = {styles.container}>
-            <Button icon='account'/>
+            <Avatar.Image size={150} source={require('../assets/sign_in.png')}/>
             <View style={styles.inputView}>
-                <TextInput
-                style={styles.TextInput}
-                label='Email'
-                value={email}
-                onChangeText={email => setEmail(email)}
-                />
+                <TextInput/>
             </View>
-            <View style={styles.inputView}>
-                <TextInput
-                style={styles.TextInput}
-                label='Password'
-                value={password}
-                onChangeText={password => setPassword(password)}
-                />
-            </View>
-            
         </View>
         
     )
@@ -40,15 +27,9 @@ const styles = StyleSheet.create({
     },
     inputView: {
         borderRadius: 30,
-        width: "100%",
+        width: "80%",
         height: 45,
         marginBottom: 20,
         alignItems: "center",
-      },
-      TextInput: {
-        
-        flex: 1,
-        padding: 10,
-        
       }
 })
